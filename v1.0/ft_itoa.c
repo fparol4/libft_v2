@@ -12,10 +12,13 @@
 
 #include "libft.h"
 
-static	int	n_len(int n)
+static int	n_len(int n)
 {
 	int	len;
-	len = (n <= 0) ? 1 : 0;
+
+	len = 1;
+	if (n > 0)
+		len = 0;
 	while (n)
 	{
 		n /= 10;
@@ -43,7 +46,7 @@ char	*ft_itoa(int n)
 	while (nb)
 	{
 		--len;
-		str[len] = (nb % 10) + '0'; 
+		str[len] = (nb % 10) + '0';
 		nb /= 10;
 	}
 	if (n < 0)

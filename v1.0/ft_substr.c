@@ -14,26 +14,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	s_len;
-	char	*sub;
-
-	if (!s)
-		return (NULL);
-	s_len = ft_strlen(s);
+	unsigned int s_len = ft_strlen(s + start);
+	char *sp = (char *) malloc ((s_len + 1)* sizeof(char));
+	if (!sp)
+		return 0;
 	if (start >= s_len)
-		len = 0;
-	else if (len > s_len - start)
-		len = s_len - start;
-	sub = (char *)malloc(len + 1);
-	if (!sub)
 		return (0);
-	i = 0;
-	while (i < len)
+	unsigned int i = 0;
+	while (i < s_len && i < len)
 	{
-		sub[i] = s[start + 1];
+		sp[i] = s[i + start];
 		i++;
 	}
-	sub[i] = '\0';
-	return (sub);
+	sp[i] = 0;
+	return sp;
 }
+
+// void	__test__()
+// {
+// 	char *a = "ABCD";
+// 	char *b = ft_substr(a, 2, 0); 
+// 	printf("R: %s", b);
+// }
+//
+// int	main() { __test__(); }
+

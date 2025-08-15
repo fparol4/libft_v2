@@ -6,7 +6,7 @@
 /*   By: fparola <fabricio.parola@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 15:56:41 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/12 15:56:41 by fparola          ###   ########.fr       */
+/*   Updated: 2025/08/13 11:54:10 by fparola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	if (!dst && !src)
 		return (NULL);
-	dst_p = (unsigned char *) dst_p;
-	src_p = (unsigned char *) dst_p;
+	dst_p = (unsigned char *) dst;
+	src_p = (unsigned char *) src;
 	i = 0;
 	while (i < n)
 	{

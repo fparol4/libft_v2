@@ -6,7 +6,7 @@
 /*   By: fparola <fabricio.parola@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 16:00:05 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/12 16:00:05 by fparola          ###   ########.fr       */
+/*   Updated: 2025/08/13 11:54:35 by fparola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	f_backwards(unsigned char *dst, unsigned char *src, size_t n)
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t			i;
 	unsigned char	*dst_p;
 	unsigned char	*src_p;
 

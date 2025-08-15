@@ -36,7 +36,7 @@ static char	*w_dup(const char *s, size_t start, size_t end)
 	size_t	i;
 	char	*word;
 
-	word = (char *) malloc (end - start + 1);
+	word = (char *)malloc(end - start + 1);
 	if (!word)
 		return (0);
 	i = 0;
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	wc = count_words(s, c); 
+	wc = count_words(s, c);
 	split = (char **)malloc(sizeof(char *) * (wc + 1));
 	if (!split)
 		return (0);
@@ -74,10 +74,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-		{
-			split[k] = w_dup(s, j, i);
-			k++;
-		}
+			split[k++] = w_dup(s, j, i);
 	}
 	split[k] = 0;
 	return (split);
