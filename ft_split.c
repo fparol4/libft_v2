@@ -72,7 +72,6 @@ static int	crop_words(char **split, char const *s, char c, int word_count)
 
 char	**ft_split(char const *s, char c)
 {
-	int		word_idx;
 	int		word_count;
 	char	**split;
 
