@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fparola <fparola@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 10:55:19 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/13 10:58:07 by fparola          ###   ########.fr       */
+/*   Created: 2025/08/15 17:22:20 by fparola           #+#    #+#             */
+/*   Updated: 2025/08/15 17:25:22 by fparola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	new->next = *lst;
+	*lst = new;
 }
-
-// void	__test__()
-// {
-// 	char *a = "ABCD";
-// 	char *b = ft_substr(a, 2, 0); 
-// 	printf("R: %s", b);
-// }
-//
-// int	main() { __test__(); }
-

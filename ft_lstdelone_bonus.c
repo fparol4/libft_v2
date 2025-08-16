@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fparola <fabricio.parola@gmail.com>        +#+  +:+       +#+        */
+/*   By: fparola <fparola@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 15:44:57 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/12 15:44:57 by fparola          ###   ########.fr       */
+/*   Created: 2025/08/15 17:34:26 by fparola           #+#    #+#             */
+/*   Updated: 2025/08/15 18:19:12 by fparola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isacii(int c)
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
