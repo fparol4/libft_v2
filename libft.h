@@ -57,7 +57,8 @@ int	    ft_signal(int v);
 int	    ft_abs(int v);
 size_t	ft_digits(size_t v, int size);
 char	*ft_itoa(int n);
-char	*ft_itoab_unsigned(size_t v, char *base);
+char	*ft_itoab(size_t v, char *base);
+char	*ft_itoab_uns(size_t v, char *base);
 
 /* ************************************************************************** */
 /*                                   STR/                                    */
@@ -86,10 +87,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n);
 /*                              Output functions                             */
 /* ************************************************************************** */
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+size_t	ft_putchar_fd(char c, int fd);
+size_t	ft_putstr_fd(char *s, int fd);
+size_t	ft_putendl_fd(char *s, int fd);
+size_t	ft_putnbr_fd(int n, int fd);
 
 /* ************************************************************************** */
 /*                               DS/LINKED-LIST/                             */

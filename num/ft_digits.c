@@ -1,6 +1,7 @@
 #include <stddef.h>
+#include <stdio.h>
 
-size_t	ft_digits(size_t v, int size)
+size_t	ft_digits(int v, int size)
 {
 	size_t	digits;
 

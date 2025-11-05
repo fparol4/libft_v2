@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <stdio.h>
 
 static	void	ft_putnbr_rec(long n, int fd)
 {
@@ -22,15 +23,19 @@ static	void	ft_putnbr_rec(long n, int fd)
 	write(fd, &c, 1);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+size_t	ft_putnbr_fd(int n, int fd)
 {
-	long	nb;
+    int     s;
+    long	nb;
 
 	nb = n;
+	s = ft_digits(n, 10);
 	if (nb < 0)
 	{
 		write(fd, "-", 1);
+		s += 1;
 		nb = -nb;
 	}
 	ft_putnbr_rec(nb, fd);
+	return (s);
 }
