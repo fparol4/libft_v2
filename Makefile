@@ -2,71 +2,66 @@ CC      = cc
 NAME    = libft.a
 CFLAGS  = -Wall -Wextra -Werror
 
-SRC     = ft_isalpha.c \
-          ft_isdigit.c \
-          ft_isalnum.c \
-          ft_isascii.c \
-          ft_isprint.c \
-          ft_strlen.c \
-          ft_memset.c \
-          ft_bzero.c \
-          ft_memcpy.c \
-          ft_memmove.c \
-          ft_strlcpy.c \
-          ft_strlcat.c \
-          ft_toupper.c \
-          ft_tolower.c \
-          ft_strchr.c \
-          ft_strrchr.c \
-          ft_strncmp.c \
-          ft_memchr.c \
-          ft_memcmp.c \
-          ft_strnstr.c \
-          ft_atoi.c \
-          ft_calloc.c \
-          ft_strdup.c \
-          ft_substr.c \
-          ft_strjoin.c \
-          ft_strtrim.c \
-          ft_split.c \
-          ft_itoa.c \
-          ft_strmapi.c \
-          ft_striteri.c \
-          ft_putchar_fd.c \
-          ft_putstr_fd.c \
-          ft_putendl_fd.c \
-          ft_putnbr_fd.c
+SRC     = util/ft_isalpha.c \
+          util/ft_isdigit.c \
+          util/ft_isalnum.c \
+          util/ft_isascii.c \
+          util/ft_isprint.c \
+          mem/ft_calloc.c \
+          mem/ft_bzero.c \
+          mem/ft_memset.c \
+          mem/ft_memcpy.c \
+          mem/ft_memmove.c \
+          mem/ft_memchr.c \
+          mem/ft_memcmp.c \
+          num/ft_atoi.c \
+          num/ft_itoa.c \
+          write/ft_putchar_fd.c \
+          write/ft_putstr_fd.c \
+          write/ft_putendl_fd.c \
+          write/ft_putnbr_fd.c \
+          str/ft_toupper.c \
+          str/ft_tolower.c \
+          str/ft_strlen.c \
+          str/ft_strlcpy.c \
+          str/ft_strlcat.c \
+          str/ft_strchr.c \
+          str/ft_strrchr.c \
+          str/ft_strncmp.c \
+          str/ft_strnstr.c \
+          str/ft_strdup.c \
+          str/ft_substr.c \
+          str/ft_strjoin.c \
+          str/ft_strtrim.c \
+          str/ft_split.c \
+          str/ft_strmapi.c \
+          str/ft_striteri.c \
+          ds/linked-list/ft_lstnew.c \
+          ds/linked-list/ft_lstadd_front.c \
+          ds/linked-list/ft_lstadd_back.c \
+          ds/linked-list/ft_lstlast.c \
+          ds/linked-list/ft_lstsize.c \
+          ds/linked-list/ft_lstdelone.c \
+          ds/linked-list/ft_lstclear.c \
+          ds/linked-list/ft_lstiter.c \
+          ds/linked-list/ft_lstmap.c
 
-BONUS   = ft_lstnew_bonus.c \
-          ft_lstadd_front_bonus.c \
-          ft_lstadd_back_bonus.c \
-          ft_lstlast_bonus.c \
-          ft_lstsize_bonus.c \
-          ft_lstdelone_bonus.c \
-          ft_lstclear_bonus.c \
-          ft_lstiter_bonus.c \
-          ft_lstmap_bonus.c
-
-OBJS        = $(SRC:.c=.o)
-BONUS_OBJS  = $(BONUS:.c=.o)
+OBJS = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	@$(MAKE) OBJS="$(OBJS) $(BONUS_OBJS)"
-
-%.o : %.c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
