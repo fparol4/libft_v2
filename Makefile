@@ -16,6 +16,7 @@ SRC     = util/ft_isalpha.c \
           mem/ft_memcmp.c \
           num/ft_atoi.c \
           num/ft_itoa.c \
+          num/ft_atof.c \
           write/ft_putchar_fd.c \
           write/ft_putstr_fd.c \
           write/ft_putendl_fd.c \
@@ -36,6 +37,7 @@ SRC     = util/ft_isalpha.c \
           str/ft_split.c \
           str/ft_strmapi.c \
           str/ft_striteri.c \
+          str/ft_streq.c \
           ds/linked-list/ft_lstnew.c \
           ds/linked-list/ft_lstadd_front.c \
           ds/linked-list/ft_lstadd_back.c \
