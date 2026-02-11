@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fparola <fabricio.parola@gmail.com>        +#+  +:+       +#+        */
+/*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 15:56:41 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/13 11:54:10 by fparola          ###   ########.fr       */
+/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	if (!dst && !src)
 		return (NULL);
-	dst_p = (unsigned char *) dst;
-	src_p = (unsigned char *) src;
+	dst_p = (unsigned char *)dst;
+	src_p = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{

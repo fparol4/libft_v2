@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fparola <fparola@gmail.com>                +#+  +:+       +#+        */
+/*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/15 18:28:06 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/15 21:03:39 by fparola          ###   ########.fr       */
+/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ static int	clean_all(char **split, int idx_word)
 
 static int	crop_words(char **split, char const *s, char c, int word_count)
 {
-	int		w_len;
-	int		word_idx;
+	int	w_len;
+	int	word_idx;
 
 	word_idx = 0;
 	while (word_idx < word_count)

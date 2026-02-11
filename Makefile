@@ -1,6 +1,6 @@
 CC      = cc
 NAME    = libft.a
-CFLAGS  = -Wall -Wextra -Werror
+CFLAGS  = -Wall -Wextra -Werror -fPIC
 
 SRC     = util/ft_isalpha.c \
           util/ft_isdigit.c \
@@ -17,6 +17,9 @@ SRC     = util/ft_isalpha.c \
           num/ft_atoi.c \
           num/ft_itoa.c \
           num/ft_atof.c \
+          num/ft_atoll.c \
+          num/ft_digits.c \
+          num/ft_utils.c \
           write/ft_putchar_fd.c \
           write/ft_putstr_fd.c \
           write/ft_putendl_fd.c \
@@ -46,7 +49,9 @@ SRC     = util/ft_isalpha.c \
           ds/linked-list/ft_lstdelone.c \
           ds/linked-list/ft_lstclear.c \
           ds/linked-list/ft_lstiter.c \
-          ds/linked-list/ft_lstmap.c
+          ds/linked-list/ft_lstmap.c \
+          ds/stack/ft_stack.c \
+          ds/stack/ft_stack_mov.c
 
 OBJS = $(SRC:.c=.o)
 

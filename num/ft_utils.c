@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:40 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:40 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-
-size_t	ft_putchar_fd(char c, int fd)
+int	ft_lowerof(int a, int b)
 {
-	write(fd, &c, 1);
-	return (1);
+	if (a < b)
+		return (a);
+	return (b);
+}
+
+int	ft_abs(int a)
+{
+	if (a < 0)
+		return (-a);
+	return (a);
 }

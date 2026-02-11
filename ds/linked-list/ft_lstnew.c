@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fparola <fparola@gmail.com>                +#+  +:+       +#+        */
+/*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/15 17:12:40 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/15 20:40:22 by fparola          ###   ########.fr       */
+/*   Created: 2026/01/30 22:05:38 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/01/30 22:05:38 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-t_list	*ft_lstnew(void	*content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 
-	list = (t_list *) malloc (sizeof(t_list));
+	list = (t_list *)malloc(sizeof(t_list));
 	if (!list)
 		return (NULL);
 	list->content = content;

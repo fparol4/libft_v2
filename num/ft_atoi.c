@@ -3,12 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fparola <fparola@gmail.com>                +#+  +:+       +#+        */
+/*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 10:48:37 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/13 10:48:39 by fparola          ###   ########.fr       */
+/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
+#include <limits.h>
+
+int	ft_vatoi(char *str)
+{
+	long long	val;
+	int			i;
+
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	if (!str[i])
+		return (0);
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
+	}
+	val = ft_atoll(str);
+	if (val > INT_MAX || val < INT_MIN)
+		return (0);
+	return (1);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -32,5 +57,5 @@ int	ft_atoi(const char *str)
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	return ((int) result * signal);
+	return ((int)result * signal);
 }

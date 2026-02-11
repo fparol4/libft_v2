@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fparola <fparola@gmail.com>                +#+  +:+       +#+        */
+/*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 11:42:29 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/13 11:44:38 by fparola          ###   ########.fr       */
+/*   Created: 2026/01/30 22:05:40 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/01/30 22:05:40 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <stdio.h>
 
-static	void	ft_putnbr_rec(long n, int fd)
+static void	ft_putnbr_rec(long n, int fd)
 {
 	char	c;
 
@@ -25,8 +25,8 @@ static	void	ft_putnbr_rec(long n, int fd)
 
 size_t	ft_putnbr_fd(int n, int fd)
 {
-    int     s;
-    long	nb;
+	int		s;
+	long	nb;
 
 	nb = n;
 	s = ft_digits(n, 10);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fparola <fabricio.parola@gmail.com>        +#+  +:+       +#+        */
+/*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 16:00:05 by fparola           #+#    #+#             */
-/*   Updated: 2025/08/13 11:54:35 by fparola          ###   ########.fr       */
+/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 	if (!dst && !src)
 		return (NULL);
-	dst_p = (unsigned char *) dst;
-	src_p = (unsigned char *) src;
+	dst_p = (unsigned char *)dst;
+	src_p = (unsigned char *)src;
 	if (dst_p > src_p)
 		f_backwards(dst_p, src_p, n);
 	else
@@ -61,5 +61,5 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 // 	ft_memmove(buff_1 + 2, buff_2, 3);
 // 	printf("RESULT -> %s;%s", buff_1, buff_2);
 // }
-// int	main (){ __test__(); }
+// int	main (void){ __test__(); }
 #endif
