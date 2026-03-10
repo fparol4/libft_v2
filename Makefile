@@ -41,17 +41,17 @@ SRC     = util/ft_isalpha.c \
           str/ft_strmapi.c \
           str/ft_striteri.c \
           str/ft_streq.c \
-          ds/linked-list/ft_lstnew.c \
-          ds/linked-list/ft_lstadd_front.c \
-          ds/linked-list/ft_lstadd_back.c \
-          ds/linked-list/ft_lstlast.c \
-          ds/linked-list/ft_lstsize.c \
-          ds/linked-list/ft_lstdelone.c \
-          ds/linked-list/ft_lstclear.c \
-          ds/linked-list/ft_lstiter.c \
-          ds/linked-list/ft_lstmap.c \
-          ds/stack/ft_stack.c \
-          ds/stack/ft_stack_mov.c
+          ds/l-list/ft_lstnew.c \
+          ds/l-list/ft_lstadd_front.c \
+          ds/l-list/ft_lstadd_back.c \
+          ds/l-list/ft_lstlast.c \
+          ds/l-list/ft_lstsize.c \
+          ds/l-list/ft_lstdelone.c \
+          ds/l-list/ft_lstclear.c \
+          ds/l-list/ft_lstiter.c \
+          ds/l-list/ft_lstmap.c \
+          ds/l-stack/ft_stack.c \
+          ds/l-stack/ft_stack_mov.c
 
 OBJS = $(SRC:.c=.o)
 
