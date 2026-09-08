@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:18 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:18 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ int	ft_handle_ptr(size_t address)
 
 	b_hex = "0123456789abcdef";
 	v_str = ft_itoab_uns((size_t)address, b_hex);
-	return (ft_putstr_fd("0x", 0) + ft_putstr_fd(v_str, 1));
+	return (ft_putstr_fd("0x", 1) + ft_putstr_fd(v_str, 1));
 }

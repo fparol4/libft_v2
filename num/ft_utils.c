@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:19 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:19 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,4 @@ int	ft_lowerof(int a, int b)
 	if (a < b)
 		return (a);
 	return (b);
-}
-
-int	ft_abs(int a)
-{
-	if (a < 0)
-		return (-a);
-	return (a);
 }

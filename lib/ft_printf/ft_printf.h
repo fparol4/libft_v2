@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:38 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:38 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:18 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:18 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
-{
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
-}
+# include "../../libft.h"
+
+int	ft_handle_int(int value);
+int	ft_handle_unsigned(unsigned int value);
+int	ft_handle_hex(unsigned int v, int upper);
+int	ft_handle_ptr(size_t address);
+
+#endif

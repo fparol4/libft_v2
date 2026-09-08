@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 19:25:19 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/06/08 19:25:19 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:17 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:17 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	s_len;
-
-	s_len = ft_strlen(s);
-	while (s_len >= 0)
-	{
-		if (s[s_len] == (char)c)
-			return ((char *)&s[s_len]);
-		s_len--;
-	}
-	return (NULL);
+	if (!lst)
+		return (NULL);
+	while (lst->next != 0)
+		lst = lst->next;
+	return (lst);
 }

@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_secfree.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:38 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:38 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:18 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:18 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include <stdlib.h>
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	*ft_secfree(char **buffer[], int size)
 {
-	t_list	*temp;
+	int	i;
 
-	if (!lst || !del)
-		return ;
-	while (*lst)
+	i = 0;
+	while (i < size)
 	{
-		temp = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
-		*lst = temp;
+		if (*buffer[i] != NULL)
+		{
+			free(*buffer[i]);
+			*buffer[i] = NULL;
+		}
+		i++;
 	}
+	return (NULL);
 }

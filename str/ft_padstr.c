@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:19 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:19 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,13 @@ char	*ft_padstart(char *str, int max_size, char placeholder)
 	if (len >= max_size)
 		return (str);
 	diff = max_size - len;
+	if ((size_t)diff > sizeof(pad))
+		return (NULL);
 	i = 0;
 	while (i < diff)
 		pad[i++] = placeholder;
-	str_wpad = ft_calloc(max_size + 1, sizeof(len));
+	str_wpad = ft_calloc(max_size + 1, sizeof(char));
 	ft_memcpy(str_wpad, pad, diff);
 	ft_memcpy(str_wpad + diff, str, len);
 	return (str_wpad);
-}
-
-int	main(int argc, char *argv[])
-{
-	char	*x0;
-
-	x0 = ft_padstart("1001", 8, '0');
-	printf("x0: %s\n", x0);
-	return (0);
 }

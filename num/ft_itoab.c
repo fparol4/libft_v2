@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:18 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:18 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoab(int v, char *base)
 	return (v_str);
 }
 
-char	*ft_itoab_unsigned(size_t v, char *base)
+char	*ft_itoab_uns(size_t v, char *base)
 {
 	int		b_size;
 	int		digits;

@@ -10,21 +10,26 @@ SRC     = util/ft_isalpha.c \
           mem/ft_calloc.c \
           mem/ft_bzero.c \
           mem/ft_memset.c \
-          mem/ft_memcpy.c \
-          mem/ft_memmove.c \
-          mem/ft_memchr.c \
-          mem/ft_memcmp.c \
-          num/ft_atoi.c \
+            mem/ft_memcpy.c \
+            mem/ft_memmove.c \
+            mem/ft_memchr.c \
+            mem/ft_memcmp.c \
+            mem/ft_secfree.c \
+            num/ft_atoi.c \
           num/ft_itoa.c \
           num/ft_atof.c \
           num/ft_atoll.c \
           num/ft_digits.c \
-          num/ft_utils.c \
+           num/ft_signal.c \
           write/ft_putchar_fd.c \
-          write/ft_putstr_fd.c \
-          write/ft_putendl_fd.c \
-          write/ft_putnbr_fd.c \
-          str/ft_toupper.c \
+           write/ft_putstr_fd.c \
+           write/ft_putendl_fd.c \
+           write/ft_putnbr_fd.c \
+             lib/ft_printf/ft_printf.c \
+             lib/ft_printf/ft_handler.c \
+             lib/ft_gnline/get_next_line.c \
+             lib/ft_gnline/get_next_line_utils.c \
+            str/ft_toupper.c \
           str/ft_tolower.c \
           str/ft_strlen.c \
           str/ft_strlcpy.c \
@@ -41,17 +46,21 @@ SRC     = util/ft_isalpha.c \
           str/ft_strmapi.c \
           str/ft_striteri.c \
           str/ft_streq.c \
-          ds/linked-list/ft_lstnew.c \
-          ds/linked-list/ft_lstadd_front.c \
-          ds/linked-list/ft_lstadd_back.c \
-          ds/linked-list/ft_lstlast.c \
-          ds/linked-list/ft_lstsize.c \
-          ds/linked-list/ft_lstdelone.c \
-          ds/linked-list/ft_lstclear.c \
-          ds/linked-list/ft_lstiter.c \
-          ds/linked-list/ft_lstmap.c \
-          ds/stack/ft_stack.c \
-          ds/stack/ft_stack_mov.c
+          ds/l-list/ft_lstnew.c \
+          ds/l-list/ft_lstadd_front.c \
+          ds/l-list/ft_lstadd_back.c \
+          ds/l-list/ft_lstlast.c \
+          ds/l-list/ft_lstsize.c \
+          ds/l-list/ft_lstdelone.c \
+          ds/l-list/ft_lstclear.c \
+          ds/l-list/ft_lstiter.c \
+          ds/l-list/ft_lstmap.c \
+          ds/d-list/ft_dlist.c \
+          ds/d-list/ft_dlist_add.c \
+          ds/d-list/ft_dlist_pop.c \
+          ds/d-list/ft_dlist_mov.c \
+          ds/d-array/ft_array.c \
+          ds/d-array/ft_array_append.c
 
 OBJS = $(SRC:.c=.o)
 

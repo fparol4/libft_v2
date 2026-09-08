@@ -5,19 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:18 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:18 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <limits.h>
 
-int	ft_vatoi(char *str)
+int	ft_vatoi(const char *str)
 {
 	long long	val;
 	int			i;
 
+	if (!str)
+		return (0);
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
@@ -30,9 +32,7 @@ int	ft_vatoi(char *str)
 		i++;
 	}
 	val = ft_atoll(str);
-	if (val > INT_MAX || val < INT_MIN)
-		return (0);
-	return (1);
+	return (val >= INT_MIN && val <= INT_MAX);
 }
 
 int	ft_atoi(const char *str)

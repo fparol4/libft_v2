@@ -5,22 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcardozo <fcardozo@student.42.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 22:05:39 by fcardozo         #+#    #+#             */
-/*   Updated: 2026/01/30 22:05:39 by fcardozo         ###   ########.fr       */
+/*   Created: 2026/06/08 19:25:18 by fcardozo         #+#    #+#             */
+/*   Updated: 2026/06/08 19:25:18 by fcardozo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
+#include "./ft_printf.h"
 #include <stdarg.h>
 
 int	fn_handle(char symbol, va_list params)
 {
 	if (symbol == 'c')
-		return (ft_putchar(va_arg(params, int)));
+		return (ft_putchar_fd(va_arg(params, int), 1));
 	else if (symbol == '%')
-		return (ft_putchar('%'));
+		return (ft_putchar_fd('%', 1));
 	else if (symbol == 's')
-		return (ft_putstr(va_arg(params, char *), 0));
+		return (ft_putstr_fd(va_arg(params, char *), 1));
 	else if (symbol == 'd' || symbol == 'i')
 		return (ft_handle_int(va_arg(params, int)));
 	else if (symbol == 'u')
@@ -44,16 +44,18 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	printed = 0;
 	v_symbols = "cspdiuxX%";
+	if (!format)
+		return (-1);
 	va_start(params, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%' && ft_strchr(v_symbols, format[i + 1]))
 		{
 			printed += fn_handle(format[i + 1], params);
-			format += 2;
+			i += 2;
 		}
 		else
-			printed += ft_putchar(format[i++]);
+			printed += ft_putchar_fd(format[i++], 1);
 	}
 	va_end(params);
 	return (printed);
